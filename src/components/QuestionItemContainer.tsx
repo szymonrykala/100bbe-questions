@@ -11,7 +11,7 @@ interface Props {
 export default function QuestionItemContainer({ isValid, onDelete, children }: Props) {
 
     return <li className={`flex gap-y-2 p-3 justify-between items-center rounded-sm ${isValid ? 'bg-light hover:bg-main-50' : 'bg-accent/40'}`}>
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start text-left">
             {children}
         </div>
 
