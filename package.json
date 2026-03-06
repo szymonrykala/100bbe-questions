@@ -2,7 +2,7 @@
   "name": "100bbe-questions",
   "description": "Aplikacja do zarządzania pytaniami do 'One of ten' i 'Family feud'.",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
