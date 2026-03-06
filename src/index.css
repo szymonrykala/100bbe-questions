@@ -47,7 +47,7 @@ a {
   @apply hover:text-accent underline underline-offset-3
 }
 
-.button, .button-red  {
+.button, .button-red {
   @apply rounded-md bg-main px-3 py-2 text-sm font-semibold text-light shadow-md hover:bg-main-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main;
 
   cursor: pointer;
@@ -62,9 +62,10 @@ a {
 }
 
 
-.question-long-input{
+.question-long-input {
   @apply flex flex-col gap-1 items-start
 }
+
 .question-long-input>textarea {
   @apply rounded-md border-2 border-main bg-light p-2 w-full;
   @apply w-full min-w-100 h-30 max-h-35
