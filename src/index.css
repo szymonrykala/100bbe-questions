@@ -68,7 +68,7 @@ a {
 
 .question-long-input>textarea {
   @apply rounded-md border-2 border-main bg-light p-2 w-full;
-  @apply w-full min-w-100 h-30 max-h-35
+  @apply w-full h-30 max-h-35
 }
 
 .small-input {

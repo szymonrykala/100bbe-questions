@@ -121,17 +121,17 @@ function App() {
     <div className='text-center flex flex-col h-full items-stretch gap-8 container p-3'>
 
       <header>
-        <h1 className='text-5xl py-5'>
+        <h1 className='text-4xl md:text-5xl py-5'>
           Dodawanie pytań
         </h1>
         <nav className='flex justify-center gap-5'>
-          do
+          <span className="hidden md:block">do</span>
           <NavLink to="/one-of-ten" className={highlight('one-of-ten', location)}>&gt;&nbsp;Jeden z dziesięciu</NavLink>
           <NavLink to="/family-feud" className={highlight('family-feud', location)}>&gt;&nbsp;Familiada</NavLink>
         </nav>
       </header>
 
-      <div className='flex justify-evenly items-center py-3'>
+      <div className='flex flex-wrap gap-1 justify-evenly items-center py-3'>
         <div className='button' title='Wczytaj plik' role='button'>
           <label htmlFor="questions-file">Wczytaj plik</label>
           <input
@@ -177,7 +177,7 @@ function App() {
       <main className='flex flex-col max-w-200 w-12/12 self-center'>
 
         <div className='flex justify-between items-center sticky top-0 bg-light z-40 py-3'>
-          <h2 className='text-3xl'>Lista pytań do "{currentGame}"</h2>
+          <h2 className='text-2xl md:text-3xl text-left'>Lista pytań do "{currentGame}"</h2>
 
           <IoMdAddCircle
             title='Dodaj pytanie'
@@ -197,7 +197,7 @@ function App() {
           }
           {
             questions.length === 0 && (<li>
-              <p className='text-dark opacity-65'>Brak pytań - dodaj kilka 😊</p>
+              <p className='text-dark opacity-65 italic'>Brak pytań - dodaj kilka 😊</p>
             </li>)
           }
         </ul>

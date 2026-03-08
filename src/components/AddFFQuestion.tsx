@@ -14,7 +14,7 @@ const defaultQuestionValue: FF.Question = {
 
 const defaultAnswerValue = {
     name: '',
-    score: 0
+    score: 10
 }
 
 
@@ -102,7 +102,14 @@ export default function AddFFQuestionForm({ addQuestion }: Props) {
                 </div>
 
             </li>
-            {question.answers.map((answer, index) => <AnswerItem key={index} answer={answer} />)}
+            {
+                question.answers.length === 0 && <li className="text-sm text-dark/50 italic py-1">
+                    Brak dodanych odpowiedzi
+                </li>
+            }
+            {
+                question.answers.map((answer, index) => <AnswerItem key={index} answer={answer} />)
+            }
         </ul>
 
         <form className="flex gap-2 justify-stretch">
@@ -120,7 +127,7 @@ export default function AddFFQuestionForm({ addQuestion }: Props) {
             </div>
 
             <div className="small-input">
-                <label htmlFor="answer-score">Wynik:</label>
+                <label htmlFor="answer-score">Punkty:</label>
                 <input
                     type="number"
                     step={1}
