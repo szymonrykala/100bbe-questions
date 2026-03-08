@@ -205,7 +205,7 @@ function App() {
       </main>
 
       <footer className='fixed bottom-0 w-full py-2 opacity-30'>
-        <p>&copy; 2026 Szymon Rykała</p>
+        <p>v{import.meta.env.VITE_VERSION} &copy; 2026 Szymon Rykała</p>
       </footer>
     </div>
   )
